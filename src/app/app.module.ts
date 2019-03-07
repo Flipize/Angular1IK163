@@ -6,6 +6,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { AddComponent } from './add/add.component';
 import { LogInComponent } from './log-in/log-in.component';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LogInComponent } from './log-in/log-in.component';
     LogInComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
