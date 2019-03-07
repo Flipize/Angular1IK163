@@ -1,0 +1,27 @@
+.toolbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: yellow;
+}
+
+.toolbar li {
+  float: left;
+}
+
+.toolbar li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 60px;
+  text-decoration: none;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 16pt;
+}
+
+.toolbar li a:hover:not(.active){
+  color: midnightblue;
+
+}
