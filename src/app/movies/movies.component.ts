@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie} from '../../modules/Movie';
 
 @Component({
   selector: 'app-movies',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
+  public DieHard: Movie;
 
-  constructor() { }
+  constructor() {
+    this.DieHard = new Movie();
+    this.DieHard.Name = 'Die Hard';
+    this.DieHard.Year = 1990;
+    this.DieHard.Director = 'Karl Kung den XVI';
+  }
 
   ngOnInit() {
   }
