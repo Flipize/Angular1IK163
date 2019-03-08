@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie} from '../../../models/Movie';
+import {MovieListService} from '../../services/movie-list.service';
 
 @Component({
   selector: 'app-movies',
@@ -7,16 +8,13 @@ import { Movie} from '../../../models/Movie';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent implements OnInit {
-  public DieHard: Movie;
+  movieArr: Movie[];
 
-  constructor() {
-    this.DieHard = new Movie();
-    this.DieHard.Name = 'Die Hard';
-    this.DieHard.Year = 1990;
-    this.DieHard.Director = 'Karl Kung den XVI';
+  constructor(private movieService: MovieListService) {
   }
 
   ngOnInit() {
+    this.movieArr = this.movieService.getMovieArr();
   }
 
 }

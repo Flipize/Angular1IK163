@@ -1,6 +1,5 @@
-<p>
-  movies works!
-</p>
-<p>
-  {{ DieHard.Director }} from {{ DieHard.Name}}
-</p>
+<ul>
+  <li *ngFor="let m of movieArr">
+    Namn: {{ m.Name }} ({{ m.Year }}), Director: {{ m.Director }}
+  </li>
+</ul>
