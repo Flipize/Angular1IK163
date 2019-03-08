@@ -29,9 +29,16 @@
     #movieDirector="ngModel"
     required
   />
-  <button class="button" [disabled]="!movieForm.valid">Add movie</button>
+  <button class="button" (click)="movieArr()" [disabled]="!movieForm.valid">Add movie</button>
 
 </form>
+
+
+<ul>
+  <li *ngFor="let m of movieArr">
+    Namn: {{ m.Name }} ({{ m.Year }}), Director: {{ m.Director }}
+  </li>
+</ul>
 
 <ng-template></ng-template>
 
