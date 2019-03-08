@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {Movie} from '../../../models/Movie';
+import {NgForm} from '@angular/forms';
+import {MovieListService} from '../../services/movie-list.service';
 
 @Component({
   selector: 'app-add',
@@ -6,10 +9,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent implements OnInit {
+  movieArr: Movie[];
+  newMovie: Movie = {
+    Name: '',
+    Year: null,
+    Director: ''
+  };
+  @ViewChild ('movieForm') theForm: NgForm;
 
-  constructor() { }
+  constructor( private movieservice: MovieListService) { }
 
   ngOnInit() {
+    this.movieservice.getMovieArr().subscribe(m => {
+      this.movieArr = m;
+    });
   }
 
+
+  onSubmit({value, valid}: {value: Movie, valid: boolean}) {
+    if (!valid) {
+      console.log('not valid');
+    } else {
+      this.movieArr.push(value);
+      this.theForm.reset();
+    }
+  }
 }

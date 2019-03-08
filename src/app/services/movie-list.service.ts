@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Movie } from '../../models/Movie';
+import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,11 @@ export class MovieListService {
     ];
   }
 
-  getMovieArr(): Movie[] {
-    return this.movieArr;
+  getMovieArr(): Observable<Movie[]> {
+    return of(this.movieArr);
+  }
+
+  addMovieArr(m: Movie) {
+    this.movieArr.push(m);
   }
 }

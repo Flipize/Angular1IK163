@@ -1,20 +1,39 @@
 <h1>Add a movie</h1>
 <br>
 
-<form>
+<form #movieForm ="ngForm" (ngSubmit)="onSubmit(movieForm)">
   <label class="labels">Movie title</label>
-  <input class="inputs" type="text">
+  <input
+    class="inputs"
+    type="text"
+    [(ngModel)]="newMovie.Name"
+    name="Name"
+    #movieName="ngModel"
+    required
+  />
   <label class="labels">Year</label>
-  <input class="inputs" type="text">
+  <input
+    class="inputs"
+    type="text"
+    [(ngModel)]="newMovie.Year"
+    name="Year"
+    #movieYear="ngModel"
+    required
+  />
   <label class="labels">Director</label>
-  <input class="inputs" type="text">
-  <label class="labels">Play time</label>
-  <input class="inputs" type="text">
-  <label class="labels">IMDb score</label>
-  <input class="inputs" type="text">
-  <br><br>
-  <input class="button" type="button" value="Add movie">
+  <input
+    class="inputs"
+    type="text"
+    [(ngModel)]="newMovie.Director"
+    name="Director"
+    #movieDirector="ngModel"
+    required
+  />
+  <button class="button" [disabled]="!movieForm.valid">Add movie</button>
+
 </form>
+
+<ng-template></ng-template>
 
 
 
