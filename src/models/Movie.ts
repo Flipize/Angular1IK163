@@ -1,14 +1,14 @@
 export class Movie {
 
-  constructor(private name?: string, private year?: number, private director?: string) {
+  constructor(private Title?: string, private year?: number, private director?: string) {
   }
 
   get Name(): string {
-    return this.name;
+    return this.Title;
   }
 
   set Name(value: string) {
-    this.name = value;
+    this.Title = value;
   }
 
   get Year(): number {

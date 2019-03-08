@@ -22,4 +22,13 @@ export class MovieListService {
   addMovieArr(m: Movie) {
     this.movieArr.push(m);
   }
+  // Databaskoppling
+  /* movie: Observable<any[]>;
+
+  constructor(private afs: AngularFirestore) {
+    this.movie = afs.collection('Movies').valueChanges();
+  }
+  getMovie(): Observable<Movie[]> {
+    return this.movie;
+  }*/
 }
