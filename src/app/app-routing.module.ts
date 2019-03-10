@@ -10,8 +10,8 @@ const routes: Routes = [
   {path: 'toolbar', component: ToolbarComponent},
   {path: 'movies', component: MoviesComponent},
   {path: 'add', component: AddComponent},
-  {path: 'log-in', component: LogInComponent},
-  {path: '', component: HomeComponent}
+  {path: 'login', component: LogInComponent},
+  {path: '', component: HomeComponent},
 ];
 
 

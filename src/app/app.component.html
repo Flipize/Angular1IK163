@@ -1,10 +1,14 @@
 <div class="toolbar" >
   <ul>
-    <li><a href="/">Home</a> </li>
-    <li><a href="/movies"> Movies</a> </li>
-    <li><a href="/add"> Add Movie</a> </li>
-    <li style="float: right"><a href="/log-in"> Log in</a> </li>
+    <li><a routerLink="/">Home</a> </li>
+    <li><a routerLink="/movies"> Movies</a> </li>
+    <li><a routerLink="/add"> Add Movie</a> </li>
+    <li *ngIf="!isLoggedIn" style="float: right"><a routerLink="/login"> Log in</a> </li>
+    <li *ngIf="isLoggedIn" style="float: right"><a routerLink="/" (click)="onLogOutClick()">Log out</a> </li>
   </ul>
+</div>
+<div id="userContainer">
+<span *ngIf="isLoggedIn" id="user">Logged in as: {{ loggedInUser }}</span>
 </div>
 
 <router-outlet></router-outlet>

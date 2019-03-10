@@ -1,3 +1,14 @@
-<p>
-  log-in works!
-</p>
+<div id="container">
+  <div id="container2">
+<h1>Login</h1>
+<form (submit)="onSubmit()">
+  <label>E-mail: </label>
+  <input class="input" type="email" [(ngModel)]="email" name="email" required /><br/>
+  <label>Password: </label>
+  <input class="input" type="password" [(ngModel)]="password" name="password"/><br/><br/>
+  <input class="button" type="submit" value="Login"/><br/>
+</form>
+    Inlagd användare: nilsson.filip@hotmail.se Lösenord: password
+    <span *ngIf="error">{{ error }}</span>
+  </div>
+</div>

@@ -1,26 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Movie } from '../../models/Movie';
 import {Observable, of} from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieListService {
-  movieArr: Movie[];
+  movieObs: Observable<any[]>;
 
-  constructor() {
-    this.movieArr = [
+  constructor(private afs: AngularFirestore) {
+    /*this.movieObs = [
       new Movie('Titanic', 1998, 'Steven Spielberg'),
       new Movie('2 Guys One Cup', 2002, 'Michael Beigart')
     ];
+    */
   }
 
-  getMovieArr(): Observable<Movie[]> {
-    return of(this.movieArr);
+  getMovieObs(): Observable<Movie[]> {
+    this.movieObs = this.afs.collection('Movies').valueChanges();
+    return this.movieObs;
   }
 
-  addMovieArr(m: Movie) {
-    this.movieArr.push(m);
+  addMovie(m: Movie) {
+    this.afs.collection('Movies').add(m);
   }
   // Databaskoppling
   /* movie: Observable<any[]>;

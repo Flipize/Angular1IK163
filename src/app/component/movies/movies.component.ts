@@ -10,12 +10,12 @@ import {Observable} from 'rxjs';
 })
 export class MoviesComponent implements OnInit {
   movieArr: Movie[];
-  movie: Observable<any[]>;
+  movieObs: Observable<any[]>;
   constructor(private movieService: MovieListService) {
   }
 
   ngOnInit() {
-    this.movieService.getMovieArr().subscribe(m => {
+    this.movieService.getMovieObs().subscribe(m => {
       this.movieArr = m;
     });
   }

@@ -20,7 +20,7 @@ export class AddComponent implements OnInit {
   constructor( private movieservice: MovieListService) { }
 
   ngOnInit() {
-    this.movieservice.getMovieArr().subscribe(m => {
+    this.movieservice.getMovieObs().subscribe(m => {
       this.movieArr = m;
     });
   }
@@ -30,7 +30,7 @@ export class AddComponent implements OnInit {
     if (!valid) {
       console.log('not valid');
     } else {
-      this.movieArr.push(value);
+      this.movieservice.addMovie(value);
       this.theForm.reset();
     }
   }

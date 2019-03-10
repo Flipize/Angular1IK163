@@ -1,8 +1,9 @@
+<div id="container">
+  <div id="container2">
 <h1>Add a movie</h1>
 <br>
-
 <form #movieForm ="ngForm" (ngSubmit)="onSubmit(movieForm)">
-  <label class="labels">Movie title</label>
+  <label class="labels">Movie title:</label>
   <input
     class="inputs"
     type="text"
@@ -11,7 +12,8 @@
     #movieName="ngModel"
     required
   />
-  <label class="labels">Year</label>
+  <br/><br/>
+  <label class="labels">Year of release:</label>
   <input
     class="inputs"
     type="text"
@@ -20,7 +22,8 @@
     #movieYear="ngModel"
     required
   />
-  <label class="labels">Director</label>
+  <br/><br/>
+  <label class="labels">Director:</label>
   <input
     class="inputs"
     type="text"
@@ -29,10 +32,12 @@
     #movieDirector="ngModel"
     required
   />
-  <button class="button" (click)="movieArr()" [disabled]="!movieForm.valid">Add movie</button>
+  <br/><br/>
+  <button class="button" [disabled]="!movieForm.valid">Add movie</button>
 
 </form>
-
+  </div>
+</div>
 
 <ul>
   <li *ngFor="let m of movieArr">
