@@ -6,3 +6,10 @@ div, iframe {
 iframe {
   display: block;
 }
+
+.rubrik {
+  margin-top: 50px;
+  color: black;
+  text-align: center;
+  font-family: Helvetica, cursive;
+}
