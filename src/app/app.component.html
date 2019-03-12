@@ -1,3 +1,4 @@
+
 <div class="toolbar" >
   <ul>
     <li><a routerLink="/">Home</a> </li>
@@ -7,6 +8,7 @@
     <li *ngIf="isLoggedIn" style="float: right"><a routerLink="/" (click)="onLogOutClick()">Log out</a> </li>
   </ul>
 </div>
+
 <div id="userContainer">
 <span *ngIf="isLoggedIn" id="user">Logged in as: {{ loggedInUser }}</span>
 </div>

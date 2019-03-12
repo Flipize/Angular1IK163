@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: yellow;
+  background-color: #003B46;
 }
 
 .toolbar li {
@@ -12,7 +12,7 @@
 
 .toolbar li a {
   display: block;
-  color: black;
+  color: #C4DFE6;
   text-align: center;
   padding: 14px 60px;
   text-decoration: none;
@@ -22,7 +22,7 @@
 }
 
 .toolbar li a:hover:not(.active){
-  color: midnightblue;
+  color: #66A5AD	;
 
 }
 
@@ -33,10 +33,12 @@
 }
 
 #user{
-  background-color: yellow;
+  background-color: #07575B;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 5px;
+  font-family: Helvetica;
+  color: #C4DFE6;
 }
 
 a.active {

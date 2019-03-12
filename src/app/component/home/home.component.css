@@ -1,9 +1,22 @@
-body {
-  font-family: sans-serif;
+
+.text {
+  font-family: Rockwell;
+  color: #C4DFE6;
+  font-size: 12pt;
 }
 
 #message{
   position: absolute;
   bottom: 0px;
   padding: 10px 10px 10px 10px;
+}
+
+.rubrik1 {
+  font-size: 20pt;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.rubrik2 {
+  text-align: center;
 }
