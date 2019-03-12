@@ -20,6 +20,7 @@
     [(ngModel)]="newMovie.Year"
     name="Year"
     #movieYear="ngModel"
+    pattern="\d{4}"
     required
   />
   <br/><br/>
@@ -38,12 +39,6 @@
 </form>
   </div>
 </div>
-
-<ul>
-  <li *ngFor="let m of movieArr">
-    Namn: {{ m.Name }} ({{ m.Year }}), Director: {{ m.Director }}
-  </li>
-</ul>
 
 <ng-template></ng-template>
 
