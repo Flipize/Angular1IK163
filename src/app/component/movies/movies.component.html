@@ -1,6 +1,9 @@
+<h1>Movies</h1>
 
+<div class="movies">
 <ul>
-  <li *ngFor="let m of movieArr">
-    <a routerLink="/details/{{ m.id }}">{{ m.Name }}</a> Year: {{ m.Year }} Director: {{ m.Director }}
+  <li class="li" *ngFor="let m of movieArr">
+    <a routerLink="/details/{{ m.id }}">{{ m.Name }}</a>
   </li>
 </ul>
+</div>

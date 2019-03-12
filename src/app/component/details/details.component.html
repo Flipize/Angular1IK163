@@ -1,4 +1,4 @@
-<h1>Details</h1>
+<h1 *ngIf="movie">{{movie.Name}}</h1>
 
 <div *ngIf="movie">
   Name: {{ movie.Name }}<br/>
