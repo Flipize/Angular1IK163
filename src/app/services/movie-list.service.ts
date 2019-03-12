@@ -48,13 +48,9 @@ export class MovieListService {
     return this.movieOne;
   }
 
-  // Databaskoppling
-  /* movie: Observable<any[]>;
-
-  constructor(private afs: AngularFirestore) {
-    this.movie = afs.collection('Movies').valueChanges();
+  deleteMovie(id: string) {
+    this.afs.doc('Movies/' + id)
+      .delete();
+    console.log('Metoden utfördes');
   }
-  getMovie(): Observable<Movie[]> {
-    return this.movie;
-  }*/
 }

@@ -19,6 +19,8 @@ export class DetailsComponent implements OnInit {
     console.log(name);
 
     this.movieService.getMovieName(name).subscribe(m => this.movie = m);
-  }
-
+    }
+    getId(): string {
+    return this.route.snapshot.paramMap.get('name');
+    }
 }
