@@ -1,0 +1,29 @@
+.left{
+  text-align: end;
+}
+
+.right{
+  text-align: start;
+}
+
+td{
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 500px;
+  font-size: 18pt;
+}
+
+.container{
+  text-align: center;
+}
+
+h1 {
+  font-size: 25pt;
+}
+
+.outer{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+

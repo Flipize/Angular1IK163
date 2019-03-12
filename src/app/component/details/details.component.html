@@ -1,11 +1,38 @@
+<div class="outer">
+  <div class="container">
 <h1 *ngIf="movie">{{movie.Name}}</h1>
 
 <div *ngIf="movie">
-  Name: {{ movie.Name }}<br/>
-  Year: {{ movie.Year }}<br/>
-  Director: {{ movie.Director }}
+  <table>
+    <tr>
+      <td class="left">
+        Title:
+      </td>
+      <td class="right">
+        {{ movie.Name }}
+      </td>
+    </tr>
+    <tr>
+      <td class="left">
+        Year of release:
+      </td>
+      <td class="right">
+        {{ movie.Year }}
+      </td>
+    </tr>
+    <tr>
+      <td class="left">
+        Director:
+      </td>
+      <td class="right">
+        {{ movie.Director }}
+      </td>
+    </tr>
+  </table>
 </div>
 
 <div *ngIf="isLoggedIn">
   <button (click)="movieService.deleteMovie(getId())">Delete</button>
+</div>
+  </div>
 </div>
