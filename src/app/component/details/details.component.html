@@ -5,26 +5,26 @@
 <div *ngIf="movie">
   <table>
     <tr>
-      <td class="left">
+      <td class="left text">
         Title:
       </td>
-      <td class="right">
+      <td class="right text">
         {{ movie.Name }}
       </td>
     </tr>
     <tr>
-      <td class="left">
+      <td class="left text">
         Year of release:
       </td>
-      <td class="right">
+      <td class="right text">
         {{ movie.Year }}
       </td>
     </tr>
     <tr>
-      <td class="left">
+      <td class="left text">
         Director:
       </td>
-      <td class="right">
+      <td class="right text">
         {{ movie.Director }}
       </td>
     </tr>
@@ -32,7 +32,7 @@
 </div>
 
 <div *ngIf="isLoggedIn">
-  <button (click)="movieService.deleteMovie(getId())">Delete</button>
+  <button class="button" (click)="movieService.deleteMovie(getId())">Delete</button>
 </div>
   </div>
 </div>

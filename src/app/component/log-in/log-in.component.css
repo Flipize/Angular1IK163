@@ -9,17 +9,24 @@ label {
   height: 25px;
   margin: 9px;
   float: right;
+
+}
+
+.text {
+  color: #10a088;
+  font-family: Helvetica;
 }
 
 .button {
   height: 40px;
   width: 170px;
-  background-color: yellow;
+  background-color: #10a088;
   font-weight: bold;
   border: 2px solid black;
   border-radius: 12px;
   margin-top: 30px;
-
+  font-family: helvetica, serif;
+  color: #F8FEF4;
 }
 
 .button:hover {
@@ -38,4 +45,9 @@ label {
   align-items: center;
   width: 50%;
   text-align: center;
+}
+
+h1 {
+  font-family: helvetica;
+  color: #035b4d;
 }
