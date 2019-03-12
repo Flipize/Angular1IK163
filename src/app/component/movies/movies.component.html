@@ -1,5 +1,5 @@
 <ul>
   <li *ngFor="let m of movieArr">
-    Namn: {{ m.Name }} ({{ m.Year }}), Director: {{ m.Director }}
+    <a routerLink="/details/{{ m.id }}">{{ m.Name }}</a> Year: {{ m.Year }} Director: {{ m.Director }}
   </li>
 </ul>

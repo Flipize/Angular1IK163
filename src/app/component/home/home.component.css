@@ -1,0 +1,9 @@
+body {
+  font-family: sans-serif;
+}
+
+#message{
+  position: absolute;
+  bottom: 0px;
+  padding: 10px 10px 10px 10px;
+}

@@ -13,14 +13,14 @@ export class AddComponent implements OnInit {
   newMovie: Movie = {
     Name: '',
     Year: null,
-    Director: ''
+    Director: '',
   };
   @ViewChild ('movieForm') theForm: NgForm;
 
-  constructor( private movieservice: MovieListService) { }
+  constructor( private movieService: MovieListService) { }
 
   ngOnInit() {
-    this.movieservice.getMovieObs().subscribe(m => {
+    this.movieService.getMovieObs().subscribe(m => {
       this.movieArr = m;
     });
   }
@@ -30,7 +30,7 @@ export class AddComponent implements OnInit {
     if (!valid) {
       console.log('not valid');
     } else {
-      this.movieservice.addMovie(value);
+      this.movieService.addMovie(value);
       this.theForm.reset();
     }
   }

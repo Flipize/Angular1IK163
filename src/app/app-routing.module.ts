@@ -7,6 +7,7 @@ import {ToolbarComponent} from './component/toolbar/toolbar.component';
 import {HomeComponent} from './component/home/home.component';
 import { NotFoundComponent } from './component/not-found/not-found-component';
 import { AuthGuardService} from './services/auth-guard.service';
+import {DetailsComponent} from './component/details/details.component';
 
 const routes: Routes = [
   {path: 'toolbar', component: ToolbarComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'add', component: AddComponent, canActivate: [AuthGuardService]},
   {path: 'login', component: LogInComponent},
   {path: '', component: HomeComponent},
+  {path: 'details/:name', component: DetailsComponent},
   {path: '**', component: NotFoundComponent}
 ];
 

@@ -15,6 +15,7 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { NotFoundComponent } from './component/not-found/not-found-component';
+import { DetailsComponent } from './component/details/details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NotFoundComponent } from './component/not-found/not-found-component';
     AddComponent,
     LogInComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
