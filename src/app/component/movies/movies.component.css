@@ -2,6 +2,12 @@
   font-size: 25px;
   font-weight: bold;
   margin-top: 50px;
+  text-align: center;
+}
+.text {
+  font-family: helvetica;
+  text-align: center;
+  color: #035b4d;
 }
 
 .li {
@@ -17,7 +23,8 @@ li:nth-child(odd) {background-color: #f2f2f2;}
 }
 
 a {
-  color: black;
+  color: #10a088;
+  font-family: Rockwell;
 }
 
 a:link {
@@ -26,7 +33,7 @@ a:link {
 
 a:hover {
   text-decoration: underline;
-  color: darkgray;
+  color: #C4DFE6;
 }
 
 

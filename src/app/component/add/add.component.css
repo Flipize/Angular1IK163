@@ -2,6 +2,13 @@
   margin: 15px;
   font-weight: bold;
   float: left;
+  font-family: helvetica;
+  color: #10a088;
+}
+h1 {
+  font-family: helvetica;
+  text-align: center;
+  color: #035b4d;
 }
 
 .inputs {
@@ -14,12 +21,13 @@
 .button {
   height: 40px;
   width: 170px;
-  background-color: yellow;
+  background-color: #10a088;
   font-weight: bold;
   border: 2px solid black;
   border-radius: 12px;
   margin-top: 30px;
-
+  font-family: helvetica;
+  color: #F8FEF4;
 }
 
 .button:hover {

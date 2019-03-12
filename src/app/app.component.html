@@ -1,9 +1,9 @@
 
 <div class="toolbar" >
   <ul>
-    <li><a routerLink="/">Home</a> </li>
-    <li><a routerLink="/movies"> Movies</a> </li>
-    <li><a routerLink="/add"> Add Movie</a> </li>
+    <li><a class="hvr-underline-reveal" routerLink="/">Home</a> </li>
+    <li><a class="hvr-underline-reveal" routerLink="/movies"> Movies</a> </li>
+    <li><a class="hvr-underline-reveal" routerLink="/add"> Add Movie</a> </li>
     <li *ngIf="!isLoggedIn" style="float: right"><a routerLink="/login"> Log in</a> </li>
     <li *ngIf="isLoggedIn" style="float: right"><a routerLink="/" (click)="onLogOutClick()">Log out</a> </li>
   </ul>
