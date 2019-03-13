@@ -2,7 +2,7 @@
   <div class="container">
 <h1 *ngIf="movie">{{movie.Name}}</h1>
 
-<div *ngIf="movie">
+<div *ngIf="movie else noMovie">
   <table>
     <tr>
       <td class="left text">
@@ -31,8 +31,9 @@
   </table>
 </div>
 
-<div *ngIf="isLoggedIn">
+<div *ngIf="isLoggedIn && movie">
   <button class="button" (click)="movieService.deleteMovie(getId())">Delete</button>
 </div>
   </div>
 </div>
+<ng-template #noMovie><h1>The movie does not exist in the database</h1></ng-template>

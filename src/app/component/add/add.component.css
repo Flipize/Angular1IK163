@@ -2,11 +2,11 @@
   margin: 15px;
   font-weight: bold;
   float: left;
-  font-family: helvetica;
+  font-family: helvetica, sans-serif;
   color: #10a088;
 }
 h1 {
-  font-family: helvetica;
+  font-family: helvetica, sans-serif;
   text-align: center;
   color: #035b4d;
 }
@@ -46,4 +46,8 @@ h1 {
   align-items: center;
   width: 50%;
   text-align: center;
+}
+
+.error{
+  color: red;
 }

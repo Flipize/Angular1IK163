@@ -49,6 +49,7 @@ export class MovieListService {
   }
 
   deleteMovie(id: string) {
+
     this.afs.doc('Movies/' + id)
       .delete();
     console.log('Metoden utfördes');

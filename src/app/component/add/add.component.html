@@ -2,7 +2,7 @@
   <div id="container2">
 <h1>Add a movie</h1>
 <br>
-<form #movieForm ="ngForm" (ngSubmit)="onSubmit(movieForm)">
+<form #movieForm ="ngForm" (ngSubmit)="onSubmit(movieForm)" autocomplete="off">
   <label class="labels">Movie title:</label>
   <input
     class="inputs"
@@ -34,9 +34,18 @@
     required
   />
   <br/><br/>
-  <button class="button" [disabled]="!movieForm.valid">Add movie</button>
 
+  <button class="button" [disabled]="!movieForm.valid">Add movie</button>
 </form>
+    <span *ngIf="(movieName.dirty || movieName.touched) && movieName.hasError('required')" class="error">
+    * Enter a title!
+    </span>
+    <span *ngIf="(movieYear.dirty || movieYear.touched) && (movieYear.hasError('pattern') || movieYear.hasError('required'))" class="error">
+    * Enter a year consisting of 4 digits!
+    </span>
+    <span *ngIf="(movieDirector.dirty || movieDirector.touched) && movieDirector.hasError('required')" class="error">
+    * Enter the name of a director!
+    </span>
   </div>
 </div>
 
